@@ -129,7 +129,7 @@ static const CGFloat kToBackgroundInitAlpha = 0.08;
     
     // End configure
     
-    [UIView animateWithDuration:duration animations:^{
+    [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
 
         toViewController.view.x = 0;
         self.toBackgroundView.x = 0;
@@ -153,7 +153,7 @@ static const CGFloat kToBackgroundInitAlpha = 0.08;
         toNaviTitle.centerX = kScreenWidth / 2;
 //        toNaviLeft.transform = CGAffineTransformIdentity;
         toNaviRight.transform = CGAffineTransformIdentity;
-
+        
     } completion:^(BOOL finished) {
         
         if (transitionContext.transitionWasCancelled) {
@@ -193,7 +193,7 @@ static const CGFloat kToBackgroundInitAlpha = 0.08;
 }
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
-    return 0.3;
+    return 0.2;
 }
 
 @end
